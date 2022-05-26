@@ -1,0 +1,140 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container2{
+    height: 100vh;
+    display: grid;
+    grid-template: 150px 150px 1fr 200px 30px 200px/auto auto;
+    grid-template-areas: "header header"
+                          "baril baril"
+                          "centroCivico tabla"
+                          " consultanos consultanos"
+                          "redes redes"
+                        "footer footer";
+}
+
+.item {
+    /* border: 2px solid blue; */
+    display: flex;
+    justify-content: center;
+    border-radius: 10px   
+   }
+
+.header {
+    grid-area: header;
+    position: fixed;
+    background-color: black;
+    color: whitesmoke;
+    width: 100%;
+    height: 150px;
+    display: grid;
+    grid-template: 150px/ 100px 0.5fr 1fr 1fr 1fr ;
+    grid-template-areas: "logo nombre nombre home contacto";
+  }
+
+  .logo{
+    grid-area: logo;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 30px;
+
+}
+
+.nombre {
+    grid-area: nombre;
+    margin-left: 50px;
+ 
+ font-size: 400%;
+ color: rgb(163, 204, 241);
+
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+}
+
+.home {
+    grid-area: home;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 120%;
+}
+
+.contacto {
+    text-align: center;
+    grid-area: contacto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 120%;
+}
+
+.baril, .consultanos {
+   
+    color: white;
+    background-color: blue;
+    border-radius: 10px;
+    font-size: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    }
+
+.baril {
+    grid-area: baril;
+
+    }
+
+.centroCivico{
+    grid-area: centroCivico;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.consultanos{
+    grid-area: consultanos;
+    text-decoration: none; 
+    color: white;
+}
+
+.redes{
+    grid-area: redes;
+    margin-top: 15px;
+}
+
+a{  text-decoration: none; color: whitesmoke;
+    transition: color, 0.3s;
+}
+a:hover {color: orangered;}
+
+    
+.tabla{
+    grid-area: tabla;
+    color: black;
+    font-size: 3vh;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 20px;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: black;
+    border-radius: 1px solid black;
+    color: rgb(163, 204, 241);
+    font-size: 150%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    margin-top: 20px;
+}

@@ -1,0 +1,227 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+a{  
+    text-decoration: none; color: whitesmoke;
+    transition: color, 0.3s;
+ }
+
+ a:hover {color: orangered;}
+
+ .item {
+    /* border: 2px solid blue; */
+    display: flex;
+    justify-content: center;
+    border-radius: 10px
+   
+   }
+.container{
+    height: 25vh;  
+    
+}
+
+.header {
+     position: fixed;
+     background-color: black;
+     color: whitesmoke;
+     width: 100%;
+     height: 150px;
+     display: grid;
+     grid-template: 75px 75px/ 75px 1fr 1fr ;
+     grid-template-areas: "logo nombre nombre" "logo home contacto";
+ }
+
+  .logo{
+     grid-area: logo;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     margin-left: 20px;
+     height: 70px;
+     width: 70px;
+     margin-top: 35px;
+ }
+
+  .nombre {
+     grid-area: nombre;
+     margin-left: 80px;
+     font-size: 200%;
+     color: rgb(163, 204, 241);
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+ }
+
+  .home {
+  grid-area: home;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 120%;
+ }
+
+ .contacto {
+     text-align: center;
+     grid-area: contacto;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     font-size: 120%;
+     margin-left: 10px;
+     margin-right: 10px;
+  }
+  .tituloContacto {
+    grid-area: tituloContacto;
+    color: rgb(4, 4, 83);
+    border: 4px solid rgb(4, 4, 83);
+    border-radius: 10px;
+    background-color: rgb(169, 229, 231);
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5vw;
+    margin-bottom: 40px;
+    font-size: 200%;
+    margin-top: 30px;
+
+}
+
+.formContacto {
+    grid-area: formContacto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 150%;
+    color: rgb(81, 81, 209);
+    margin-bottom: 10px;
+}
+
+.donde{
+    grid-area: donde;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    font-size: 150%;
+    color: rgb(81, 81, 209);
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.mapa{
+    grid-area: mapa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    margin-bottom: 20px;
+}
+
+.formulario{
+    grid-area: formulario;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+footer {
+    background-color: black;
+    border-radius: 1px solid black;
+    color: rgb(163, 204, 241);
+    font-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    margin-top: 20px;
+}
+
+@media screen and (min-width:780px) {
+.container2{
+    display: grid;
+    grid-template: 150px 100px 100px 1fr 100px / 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "header header header header header header" 
+    "tituloContacto tituloContacto tituloContacto tituloContacto tituloContacto tituloContacto" 
+    "formContacto formContacto formContacto donde donde donde"
+    "formulario formulario formulario mapa mapa mapa"
+    "instagram instagram facebook facebook twitter twitter"
+   }
+
+   .header {
+    grid-area: header;
+    display: grid;
+    grid-template: 150px/ 100px 0.5fr 1fr 1fr 1fr ;
+    grid-template-areas: "logo nombre nombre home contacto";
+    margin-bottom: 50px;
+ }
+   
+ .logo{
+    grid-area: logo;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 30px;
+
+}
+
+.nombre {
+    margin-left: 50px;
+    font-size: 400%;
+}
+
+.contacto {
+    margin-left: 0px;
+    margin-right: 0px;
+  
+ }
+      
+.tituloContacto {
+    grid-area: tituloContacto;
+    margin-top: 20px;
+}
+
+.formContacto {
+    grid-area: formContacto;
+}
+
+.donde{
+    grid-area: donde;
+    margin-top: 0px
+}
+
+.mapa{
+    grid-area: mapa;
+    
+   
+}
+
+.formulario{
+    grid-area: formulario;
+    
+}
+
+.footer {
+    grid-area: footer;
+}
+
+
+}
+
+@media screen and (min-width:480px) and (max-width:780px) {
+
+    .header {
+        display: grid;
+        grid-template: 150px/ 100px 0.5fr 1fr 1fr 1fr ;
+        grid-template-areas: "logo nombre nombre home contacto";
+        }
+    
+    .logo{
+        margin-left: 40px;
+        }
+}
